@@ -9,7 +9,7 @@
         </header>
         <section>
             <NewTodo v-on:newtask="addTask($event)"></NewTodo>
-            <TodoList v-bind:tasks="tasks"></TodoList>
+            <TodoList v-bind:tasks="tasks" v-on:remover="removeTask($event)"></TodoList>
         </section>
     </div>
 </template>
@@ -24,7 +24,7 @@ export default {
         return {
             day: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
             month: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-            tasks: [{name: "hello", status: false}]
+            tasks: []
         }
     },
 
@@ -43,6 +43,11 @@ export default {
                 status: false
             }
             this.tasks.push(task)
+        },
+
+        removeTask (task) {
+            const index = this.tasks.indexOf(task)
+            this.tasks.splice(index, 1)
         }
     },
     components: { NewTodo, TodoList },

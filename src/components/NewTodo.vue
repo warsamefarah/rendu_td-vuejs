@@ -20,3 +20,21 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    input {
+        border: none;
+        border-bottom: 1px solid grey;
+        width: 200px;
+    }
+
+    input[type=button] {
+        width: 50px;
+        height: 50px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.5rem;
+    }
+</style>
