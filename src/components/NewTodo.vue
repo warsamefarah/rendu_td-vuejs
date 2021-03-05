@@ -1,7 +1,7 @@
 <template>
     <div class="todo-body">
         <input v-model="task" placeholder="Nouvelle tâche">
-        <input v-on:click="sendTask" type="button" value="+">
+        <input v-on:click="sendTask(task)" type="button" value="+">
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         sendTask(task) {
-            this.$emit('newTask', task)
+            this.$emit('newtask', task)
         }
     }
 }

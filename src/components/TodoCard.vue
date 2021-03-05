@@ -8,7 +8,7 @@
             </div>
         </header>
         <section>
-            <NewTodo v-on:newTask="addTask(name)"></NewTodo>
+            <NewTodo v-on:newtask="addTask($event)"></NewTodo>
             <TodoList v-bind:tasks="tasks"></TodoList>
         </section>
     </div>
@@ -24,7 +24,7 @@ export default {
         return {
             day: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
             month: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-            tasks: [{name: "hello", status: `checked`}]
+            tasks: [{name: "hello", status: false}]
         }
     },
 
