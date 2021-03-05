@@ -34,4 +34,13 @@ export default {
         display: flex;
         justify-content: space-between;
     }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        background-color: #F14667;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 </style>

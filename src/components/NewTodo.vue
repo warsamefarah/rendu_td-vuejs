@@ -31,10 +31,11 @@ export default {
     input[type=button] {
         width: 50px;
         height: 50px;
-        background-color: green;
+        background-color: rgb(41, 151, 78);
         color: white;
         border: none;
-        border-radius: 50px;
+        border-radius: 30px;
         font-size: 1.5rem;
+        cursor: pointer;
     }
 </style>
